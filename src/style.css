@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+	font-size: 120%;
+}
+
+body{
+	font-family: 'Noto Sans JP';
+}
+
+
+.centering_parent {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateY(0%) translateX(-50%);
+   
+    padding: 10px 30px;
+	/* border: solid 2px rgba(0,0,0,0.4); */
+	text-align: left;
+	/* width: 1000px; */
+	color: rgba(0,0,0,0.4);
+}
+
+h1 {
+  position: relative;
+  font-size: 32px;
+  line-height: 1.4;
+  padding:0.25em 1em;
+  top:0;
+}
+
+h1:before, h1:after { 
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 8px;
+  height: 100%;
+}
+h1:before {
+  border-left: solid 1px rgba(0,0,0,0.4);
+  border-top: solid 1px rgba(0,0,0,0.4);
+  border-bottom: solid 1px rgba(0,0,0,0.4);
+  left: 0;
+}
+h1:after {
+  border-top: solid 1px rgba(0,0,0,0.4);
+  border-right: solid 1px rgba(0,0,0,0.4);
+  border-bottom: solid 1px rgba(0,0,0,0.4);
+  right: 0;
+}
+
+.ui-collapsible {
+	font-weight: bold;
+}
+
+.ui-textbox {
+	font-weight: bold;
+}
