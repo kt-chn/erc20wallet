@@ -4,7 +4,7 @@ Vue.use(VueRouter);
 
 import App from "./app.vue";
 import Top from "./top.vue";
-import About from "./about.vue";
+import Generate from "./generate.vue";
 
 import KeenUI from 'keen-ui';
 import 'keen-ui/dist/keen-ui.css';
@@ -14,7 +14,8 @@ import "./style.css";
 
 const router = new VueRouter({
     mode: "history",
-    routes: [{ path: "/", component: Top }, { path: "/about", component: About }]
+    base: env.ROOT_BASE,
+    routes: [{ path: "/", component: Top }, { path: "/generate", component: Generate }]
 });
 
 new Vue({
