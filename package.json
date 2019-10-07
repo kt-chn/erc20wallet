@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env.ROOT_BASE=/erc20wallet/dist/",
+    "build": "webpack",
     "start": "webpack-dev-server"
   },
   "keywords": [],
