@@ -12,7 +12,6 @@ body{
 	font-family: 'Noto Sans JP';
 }
 
-
 .centering_parent {
 	position: absolute;
 	top: 10%;
@@ -40,12 +39,14 @@ h1:before, h1:after {
   width: 8px;
   height: 100%;
 }
+
 h1:before {
   border-left: solid 1px rgba(0,0,0,0.87);
   border-top: solid 1px rgba(0,0,0,0.87);
   border-bottom: solid 1px rgba(0,0,0,0.87);
   left: 0;
 }
+
 h1:after {
   border-top: solid 1px rgba(0,0,0,0.87);
   border-right: solid 1px rgba(0,0,0,0.87);
@@ -68,6 +69,10 @@ h1:after {
   margin-bottom: 24px;
 }
 
+.innerBox{
+  padding: 24px;
+}
+
 h2{
   background-color: rgba(219,219,219,1);
   margin: 0;
@@ -76,29 +81,6 @@ h2{
   padding-bottom: 12px;
   font-size: 1em;
   font-weight: bold;
-}
-
-.innerBox{
-  padding: 24px;
-}
-/* ---------------------------------------------------------------------- */
-
-.v-enter-active {
-  transition: all 1.3s ease 0s;
-}
-.v-leave-active {
-  transition: all 0.8s ease 0s;
-}
-.v-enter,
-.v-leave-to {
-  opacity: 0;
-}
-.v-enter {
-  transform: translateX(-60px);
-}
-
-.v-leave-to {
-  transform: translateX(60px);
 }
 
 p{
@@ -112,6 +94,8 @@ a{
   text-decoration: none;
   color:#569FF4
 }
+
+/* vue-routerのlink */
 h3 {
   position: relative;
   line-height: 1.4;
@@ -137,4 +121,21 @@ h3:before {
   margin-top: -4px;
 }
 
+/* アニメーション用 */
+.v-enter-active {
+  transition: all 1.3s ease 0s;
+}
+.v-leave-active {
+  transition: all 0.8s ease 0s;
+}
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+.v-enter {
+  transform: translateX(-60px);
+}
 
+.v-leave-to {
+  transform: translateX(60px);
+}

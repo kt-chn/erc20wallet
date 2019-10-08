@@ -53,7 +53,7 @@ export default {
   data() {
     return {
       show: false,
-      tokenAddress: "0x0abcd3ee0378b6bb406cfa8ea4521e7b03b89713",
+      tokenAddress: "",
       privateKey: "",
       address: "",
       tokenName: "",
@@ -62,10 +62,8 @@ export default {
       etherBalance: 0,
       toAddress: "",
       transferValue: "",
-      // UI-Alert
       showAlert1: false,
       showAlert2: false,
-      // UI-Progress-Linear
       isLoading: false
     };
   },
@@ -93,7 +91,6 @@ export default {
       this.etherBalance = Math.floor(this.etherBalance * 10 ** 4) / 10 ** 4;
     },
     async transfer() {
-      // ETHが足らなかった時の表示
       if (this.etherBalance === 0) {
         this.showAlert2 = true;
         return;

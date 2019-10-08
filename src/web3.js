@@ -55,24 +55,8 @@ export default class {
         let gasAmount = await deployObject.estimateGas({ from: userAddress }) + 10000;
         let tx = { from: userAddress, data: encodedABI, gas: gasAmount };
         let signedtx = await this.account.signTransaction(tx);
-        console.log(signedtx);
         let receipt = await this.web3.eth.sendSignedTransaction(signedtx.rawTransaction);
         console.log(receipt);
         return { contractAddress: receipt.contractAddress, transactionHash: receipt.transactionHash };
     }
 }
-
-/*
-
-pragma solidity ^0.5.10;
-
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
-
-contract ERC20Token is ERC20, ERC20Detailed{
-    constructor(string memory _name, string memory _symbol, uint8 _decimals, uint256 _value) ERC20Detailed( _name, _symbol, _decimals) public {
-        _mint( msg.sender, _value);
-    }
-}
-
-*/
