@@ -12,3 +12,6 @@ ERC20トークンのアドレスと、表示したいアカウントの秘密鍵
 
 ### URL
 [https://kt-chn.github.io/erc20wallet/dist/](https://kt-chn.github.io/erc20wallet/dist/)
+
+
+トランスパイルしてないので古いブラウザだと動きません
