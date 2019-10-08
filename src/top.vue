@@ -39,6 +39,9 @@
         </div>
       </div>
     </transition>
+    <router-link to="/generate" tag="h3">
+      <a>ERC20トークンの発行</a>
+    </router-link>
   </div>
 </template>
 
@@ -90,21 +93,21 @@ export default {
       this.etherBalance = Math.floor(this.etherBalance * 10 ** 4) / 10 ** 4;
     },
     async transfer() {
+      this.showAlert1 = false;
+      this.showAlert2 = false;
       // ETHが足らなかった時の表示
       if (this.etherBalance === 0) {
         this.showAlert2 = true;
         return;
-      } else {
-        this.showAlert2 = false;
       }
       try {
         this.isLoading = true;
         await erc20Token.transferERC20Token(this.toAddress, this.transferValue);
         await this.getBalance();
-        this.showAlert1 = false;
         this.isLoading = false;
       } catch (e) {
         this.showAlert1 = true;
+        this.isLoading = false;
       }
     }
   }
