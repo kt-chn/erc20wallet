@@ -14,5 +14,8 @@ ERC20トークンのアドレスと、表示したいアカウントの秘密鍵
 ### URL
 [https://kt-chn.github.io/erc20wallet/dist/](https://kt-chn.github.io/erc20wallet/dist/)
 
+テスト用のERC20トークンのアドレス  
+0x0abcd3ee0378b6bb406cfa8ea4521e7b03b89713
+
 テスト用の秘密鍵  
-0x0D274BD5D6DC605137D958AC2DB9C9BD189FF86338150A04C7DB4B3E9- 42FAC0C
+0x0D274BD5D6DC605137D958AC2DB9C9BD189FF86338150A04C7DB4B3E942FAC0C
