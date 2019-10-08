@@ -65,7 +65,6 @@ export default {
   methods: {
     async generate() {
       try {
-        this.showAlert1 = false;
         this.isLoading = true;
         let re = await erc20Token.deployContract(
           this.tokenName,

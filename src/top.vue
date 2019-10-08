@@ -93,12 +93,12 @@ export default {
       this.etherBalance = Math.floor(this.etherBalance * 10 ** 4) / 10 ** 4;
     },
     async transfer() {
-      this.showAlert1 = false;
-      this.showAlert2 = false;
       // ETHが足らなかった時の表示
       if (this.etherBalance === 0) {
         this.showAlert2 = true;
         return;
+      } else {
+        this.showAlert2 = false;
       }
       try {
         this.isLoading = true;
