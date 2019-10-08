@@ -26,12 +26,13 @@
       <div v-if="this.show" key="2">
         <div class="box">
           <h2>{{tokenBalance + ' ' + tokenName}}</h2>
-          <div class="innerBox">
+          <div class="innerBox" v-if="!isLoading">
             <ui-textbox v-model="toAddress" label="送金先アドレス"></ui-textbox>
             <ui-textbox v-model="transferValue" label="送金額"></ui-textbox>
             <ui-textbox v-model="address" label="送金元アドレス" readonly></ui-textbox>
             <ui-button @click="transfer">Transfer</ui-button>
           </div>
+          <lottie v-if="isLoading" :options="defaultOptions" :height="300" :width="300" />
         </div>
 
         <div class="box">
@@ -49,7 +50,13 @@
 import Erc20Token from "./web3.js";
 const erc20Token = new Erc20Token();
 
+import Lottie from "./lottie.vue";
+import * as animationData from "./assets/check.json";
+
 export default {
+  components: {
+    Lottie
+  },
   data() {
     return {
       show: false,
@@ -64,7 +71,8 @@ export default {
       transferValue: "",
       showAlert1: false,
       showAlert2: false,
-      isLoading: false
+      isLoading: false,
+      defaultOptions: { animationData: animationData, loop: true }
     };
   },
   methods: {
@@ -101,6 +109,8 @@ export default {
         this.isLoading = true;
         await erc20Token.transferERC20Token(this.toAddress, this.transferValue);
         await this.getBalance();
+        this.toAddress = "";
+        this.transferValue = "";
         this.isLoading = false;
       } catch (e) {
         this.showAlert1 = true;

@@ -7,7 +7,7 @@
       <div v-if="!this.show" key="1">
         <div class="box">
           <h2>設定</h2>
-          <div class="innerBox">
+          <div class="innerBox" v-if="!isLoading">
             <ui-textbox v-model="tokenName" label="トークンの名称"></ui-textbox>
             <ui-textbox v-model="tokenSymbol" label="トークンの単位表記"></ui-textbox>
             <ui-textbox v-model="tokenDecimals" label="小数点の桁数"></ui-textbox>
@@ -15,6 +15,7 @@
             <ui-textbox v-model="privateKey" label="自分の秘密鍵"></ui-textbox>
             <ui-button @click="generate">Generate</ui-button>
           </div>
+          <lottie v-if="isLoading" :options="defaultOptions" :height="300" :width="300" />
         </div>
       </div>
       <div v-if="this.show" key="2">
@@ -47,7 +48,14 @@
 <script>
 import Erc20Token from "./web3.js";
 const erc20Token = new Erc20Token();
+
+import Lottie from "./lottie.vue";
+import * as animationData from "./assets/check.json";
+
 export default {
+  components: {
+    Lottie
+  },
   data() {
     return {
       show: false,
@@ -59,7 +67,8 @@ export default {
       contractAddress: "",
       transactionHash: "",
       showAlert1: false,
-      isLoading: false
+      isLoading: false,
+      defaultOptions: { animationData: animationData, loop: true }
     };
   },
   methods: {
