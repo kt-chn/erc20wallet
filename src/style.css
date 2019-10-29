@@ -5,137 +5,138 @@
 }
 
 html {
-	font-size: 120%;
+    font-size: 120%;
 }
 
-body{
-	font-family: 'Noto Sans JP';
+body {
+    font-family: "Noto Sans JP";
 }
 
 .centering_parent {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	transform: translateY(0%) translateX(-50%);
-  padding: 10px 30px;
-	text-align: left;
-	color: rgba(0,0,0,0.87);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateY(0%) translateX(-50%);
+    padding: 10px 30px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.87);
 }
 
 h1 {
-  position: relative;
-  font-size: 32px;
-  line-height: 1.4;
-  padding:0.25em 1em;
-  top:0;
-  width:550px;
-  text-align:center;
+    position: relative;
+    font-size: 32px;
+    line-height: 1.4;
+    padding: 0.25em 1em;
+    top: 0;
+    width: 550px;
+    text-align: center;
 }
 
-h1:before, h1:after { 
-  position: absolute;
-  top: 0;
-  content:'';
-  width: 8px;
-  height: 100%;
+h1:before,
+h1:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 8px;
+    height: 100%;
 }
 
 h1:before {
-  border-left: solid 1px rgba(0,0,0,0.87);
-  border-top: solid 1px rgba(0,0,0,0.87);
-  border-bottom: solid 1px rgba(0,0,0,0.87);
-  left: 0;
+    border-left: solid 1px rgba(0, 0, 0, 0.87);
+    border-top: solid 1px rgba(0, 0, 0, 0.87);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.87);
+    left: 0;
 }
 
 h1:after {
-  border-top: solid 1px rgba(0,0,0,0.87);
-  border-right: solid 1px rgba(0,0,0,0.87);
-  border-bottom: solid 1px rgba(0,0,0,0.87);
-  right: 0;
+    border-top: solid 1px rgba(0, 0, 0, 0.87);
+    border-right: solid 1px rgba(0, 0, 0, 0.87);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.87);
+    right: 0;
 }
 
 .ui-collapsible {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .ui-textbox {
-	font-weight: bold;
+    font-weight: bold;
 }
 
-.box{
-  border: solid 1px rgba(219,219,219,1);
-  padding: 0;
-  font-weight: bold;
-  margin-bottom: 24px;
+.box {
+    border: solid 1px rgba(219, 219, 219, 1);
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 24px;
 }
 
-.innerBox{
-  padding: 24px;
+.innerBox {
+    padding: 24px;
 }
 
-h2{
-  background-color: rgba(219,219,219,1);
-  margin: 0;
-  padding-left: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 1em;
-  font-weight: bold;
+h2 {
+    background-color: rgba(219, 219, 219, 1);
+    margin: 0;
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 1em;
+    font-weight: bold;
 }
 
-p{
-  font-size:1em;
-  color: rgba(0,0,0,0.6);
-  margin:0;
-  padding:0;
+p {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 0;
 }
 
-a{
-  text-decoration: none;
-  color:#569FF4
+a {
+    text-decoration: none;
+    color: #569ff4;
 }
 
 /* vue-routerのlink */
 h3 {
-  position: relative;
-  line-height: 1.4;
-  padding:0.25em 1em;
-  display: inline-block;
-  top:0;
-  margin: 0 0 0 auto;
+    position: relative;
+    line-height: 1.4;
+    padding: 0.25em 1em;
+    display: inline-block;
+    top: 0;
+    margin: 0 0 0 auto;
 }
 
 h3:before {
-  content: '';
-  width: 0.5em;
-  height: 0.5em;
-  border: 0px;
-  border-top: solid 2px #569FF4;
-  border-right: solid 2px #569FF4;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -4px;
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border: 0px;
+    border-top: solid 2px #569ff4;
+    border-right: solid 2px #569ff4;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
 }
 
 /* アニメーション用 */
 .v-enter-active {
-  transition: all 1.3s ease 0s;
+    transition: all 1.3s ease 0s;
 }
 .v-leave-active {
-  transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
 }
 .v-enter,
 .v-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
 .v-enter {
-  transform: translateX(-60px);
+    transform: translateX(-60px);
 }
 
 .v-leave-to {
-  transform: translateX(60px);
+    transform: translateX(60px);
 }

@@ -14,7 +14,7 @@ import "./style.css";
 
 const router = new VueRouter({
     mode: "history",
-    base: "erc20wallet/dist/",
+    //base: "erc20wallet/dist/",
     routes: [{ path: "/", component: Top }, { path: "/generate", component: Generate }]
 });
 
