@@ -6,16 +6,19 @@ import App from "./app.vue";
 import Top from "./top.vue";
 import Generate from "./generate.vue";
 
-import KeenUI from 'keen-ui';
-import 'keen-ui/dist/keen-ui.css';
+import KeenUI from "keen-ui";
+import "keen-ui/dist/keen-ui.css";
 Vue.use(KeenUI);
 
 import "./style.css";
 
 const router = new VueRouter({
     mode: "history",
-    //base: "erc20wallet/dist/",
-    routes: [{ path: "/", component: Top }, { path: "/generate", component: Generate }]
+    base: "erc20wallet/dist/",
+    routes: [
+        { path: "/", component: Top },
+        { path: "/generate", component: Generate }
+    ]
 });
 
 new Vue({
